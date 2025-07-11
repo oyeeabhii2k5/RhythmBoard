@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login | Neon Dashboard</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <style>
+            body{
+                margin: 0;
+                background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+                font-family: 'Popins', sans-serif;
+                color: white;
+            }
+
+            .login-container{
+                background: rgba(255, 255, 255, 0.05);
+                backdrop-filter: blur(20px);
+                border-radius: 15px;
+                padding: 3rem;
+                box-shadow: 0 0 25px rgba(0, 255, 255, 0.4);
+                text-align: center;
+                width: 350px;
+                animation: fadeIn 1s ease-in-out;
+            }
+
+            .login-container h2{
+                margin-bottom: 1.5rem;
+            }
+
+            .login-container input{
+                width: 100%;
+                padding: 0.8rem;
+                margin: 0.5rem 0;
+                background: rgba(255, 255, 255, 0.1);
+                border: none;
+                border-radius: 8px;
+                color: white;
+                outline: none;
+            }
+
+            .login-container button{
+                width: 100%;
+                padding: 0.8rem;
+                margin-top: 1rem;
+                background: cyan;
+                color: #111;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                font-weight: bold;
+                transition: 0.3s ease;
+            }
+
+            .login-container button:hover{
+                background: #00f7ff;
+            }
+
+            .login-container p{
+                margin-top: 1rem;
+            }
+
+            .login-container span{
+                color: cyan;
+                cursor: pointer;
+                text-decoration: underline;
+            }
+
+            @keyframes fadeIn{
+                from {opacity: 0; transform: translateY(-20px);}
+                to {opacity: 1; transform: translateY(0);}
+            }
+         </style>
+    </head>
+    <body>
+        <div class="login-container glass">
+            <h2 id="form-title">Login</h2>
+            <input type="email" id="email" placeholder="Email" required />
+            <input type="password" id="password" placeholder="Password" required />
+            <button onclick="handleAuth()">Submit</button>
+            <p id="switch-text">
+                Don't have an account?
+                <span onclick="toggleForm()">Sign up</span>
+            </p>
+        </div>
+
+        <script src="js/auth.js"></script>
+    </body>
+</html>

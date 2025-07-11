@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Abhi's Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar glass">
+    <h1 class="logo">ABHI</h1>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button id="toggle-theme">🌓</button>
+  </nav>
+
+  <!-- Home Section -->
+  <section id="home">
+    <div class="dashboard">
+      <div class="widget glass profile-card">
+        <img src="assets/profille.jpeg" alt="Profile" />
+        <h2>Abhi Singh</h2>
+        <p>Future Java Pro 👨‍💻</p>
+      </div>
+
+      <div class="widget glass time">
+        <h3 id="time"></h3>
+        <p id="date"></p>
+      </div>
+
+      <div class="widget glass music-player">
+        <h3>🎧 Music Player</h3>
+        <audio controls id="audio-player">
+          <source src="music/song1.mpeg" type="audio/mpeg" />
+        </audio>
+        <div class="song-list">
+          <button onclick="changeSong('song1.mpeg')">Song 1</button>
+          <button onclick="changeSong('song2.mpeg')">Song 2</button>
+          <button onclick="changeSong('song3.mpeg')">Song 3</button>
+          <button onclick="changeSong('song4.mpeg')">Song 4</button>
+          <button onclick="changeSong('song5.mpeg')">Song 5</button>
+          <button onclick="changeSong('song6.mpeg')">Song 6</button>
+          <button onclick="changeSong('song7.mpeg')">Song 7</button>
+          <button onclick="changeSong('song8.mpeg')">Song 8</button>
+        </div>
+      </div>
+
+      <div class="widget glass weather">
+        <h3>☀️ Weather</h3>
+        <p>25°C, Sunny</p>
+      </div>
+
+      <div class="widget glass task-list">
+        <h3>📝 Task List</h3>
+        <input type="text" id="task-input" placeholder="Add a task..." />
+        <button onclick="addTask()">Add Task</button>
+        <ul id="task-list"></ul>
+      </div>
+
+      <div class="widget glass notes">
+        <h3>🧠 Notes</h3>
+        <textarea id="notes" placeholder="Write something..."></textarea>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="section-title">
+      <h2>About Me</h2>
+    </div>
+    <div class="about-card glass">
+      <img src="assets/about.jpeg" alt="About Me" />
+      <h3>Hey, I'm Abhi Singh</h3>
+      <p>
+        I’m a passionate front-end developer with a flair for design and interaction. This is my final HTML/CSS/JS project before transitioning into the world of Java. I build UI experiences that feel modern and smooth — from music widgets to smart dashboards. I love solving real problems with code and learning with every step. 💻✨
+      </p>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <div class="section-title">
+      <h2>Projects</h2>
+    </div>
+    <div class="project-cards">
+      <div class="card glass">
+        <img src="assets/project1.jpeg" alt="Project 1" />
+        <h3>Music Dashboard</h3>
+        <p>A smart music player with 8 songs, notes & tasks.</p>
+        <button>View</button>
+      </div>
+      <div class="card glass">
+        <img src="assets/project2.jpeg" alt="Project 2" />
+        <h3>Portfolio Website</h3>
+        <p>A modern, responsive portfolio built with HTML/CSS/JS.</p>
+        <button>View</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="section-title">
+      <h2>Skills</h2>
+    </div>
+    <div class="circular-skills">
+      <div class="circle" data-percent="95">
+        <svg><circle cx="50" cy="50" r="40"></circle></svg>
+        <div class="label">HTML<br><span>95%</span></div>
+      </div>
+      <div class="circle" data-percent="90">
+        <svg><circle cx="50" cy="50" r="40"></circle></svg>
+        <div class="label">CSS<br><span>90%</span></div>
+      </div>
+      <div class="circle" data-percent="80">
+        <svg><circle cx="50" cy="50" r="40"></circle></svg>
+        <div class="label">JavaScript<br><span>80%</span></div>
+      </div>
+      <div class="circle" data-percent="70">
+        <svg><circle cx="50" cy="50" r="40"></circle></svg>
+        <div class="label">Java<br><span>70%</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact / Footer -->
+  <footer id="contact">
+    <div class="section-title">
+      <h2>Contact Me</h2>
+    </div>
+    <form id="contact-form">
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message..." required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <div class="social-icons">
+      <a href="https://instagram.com/oyee.abhii02" target="_blank">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://github.com/oyeeabhii2k5" target="_blank">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script src="js/script.js"></script>
+</body>
+</html>
